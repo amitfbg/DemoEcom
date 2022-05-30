@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { menProducts } from "../__mockData__/mockData";
+import { menProducts, womenProducts } from "../__mockData__/mockData";
 import ProductCard from "./ProductCard";
-import UserTypeCard from "./UserTypeCard";
 
 const Container = styled.div`
   display: flex;
@@ -17,7 +16,7 @@ function Products() {
   const userType = location.pathname?.split("/")?.[1];
   useEffect(() => {
     if (userType == "men") setProducts(menProducts);
-    else setProducts(menProducts);
+    else setProducts(womenProducts);
   }, [userType]);
 
   return (
