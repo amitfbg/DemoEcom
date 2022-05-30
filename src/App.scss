@@ -1,6 +1,7 @@
-$mainColor:#bada55;
+$mainBG:"./assets/Home_bg.svg";
 
 .app{
-    background-color: $mainColor;
+
+    background-image:url(#{$mainBG});
     height: 100vh;
 }
