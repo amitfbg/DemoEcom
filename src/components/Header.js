@@ -3,16 +3,17 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 3rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  color: #ffffff;
+  color: #000000;
 `;
 const ContainerLeft = styled.div`
-  font-size: 1rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  cursor: pointer;
 `;
 const ContainerRight = styled.div`
   display: flex;

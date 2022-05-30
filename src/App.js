@@ -8,7 +8,7 @@ import Product from "./components/Product";
 import Products from "./components/Products";
 
 const ContainerBody = styled.div`
-  height: calc(100% - 3rem);
+  height: calc(100% - 5rem);
   overflow: auto;
 `;
 

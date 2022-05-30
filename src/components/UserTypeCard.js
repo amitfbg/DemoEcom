@@ -12,12 +12,22 @@ const MainContainer = styled.div`
   flex-direction: column;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 20px 0 rgba(31, 38, 135, 0.37);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   color: #000000;
+  cursor: pointer;
 `;
 
 const ImageContainer = styled.div`
-  height: calc(100% - 2rem);
+  height: calc(100% - 4rem);
+  width: 100%;
+`;
+
+const Image = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 `;
 const TextContainer = styled.div`
   display: flex;
@@ -46,7 +56,7 @@ function UserTypeCard({ userType, userImage }) {
   return (
     <MainContainer onClick={handleClick}>
       <ImageContainer>
-        <img src={userImage} alt="N/A" />
+        <Image src={userImage} alt="N/A" />
       </ImageContainer>
       <TextContainer>
         <Title>{userType}</Title>

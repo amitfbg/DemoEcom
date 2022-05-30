@@ -1,18 +1,18 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
   width: 15rem;
   background-color: #fff;
-  height: 18rem;
+  height: 19rem;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
   margin: 0.5rem;
   border-radius: 0.5rem;
-  //   &:last-child {
-  //     flex: 0 0 auto;
-  //   }
+  box-shadow: 0 5px 5px 0 rgba(31, 38, 135, 0.37);
 `;
 const ImageDiv = styled.div`
   height: 210px;
@@ -28,7 +28,7 @@ const Image = styled.img`
 const ContentDiv = styled.div`
   padding: 0 10px;
   height: 100%;
-  margin-top: 14px;
+  margin: 14px 0;
   overflow: hidden;
 `;
 const ProductBrand = styled.div`
@@ -74,22 +74,33 @@ const DiscountedPercentage = styled.span`
   margin-left: 5px;
 `;
 
-function ProductCard() {
+function ProductCard({ productData }) {
+  const history = useHistory();
+  let location = useLocation();
+
+  const { brand, imageUrl, description, price, discountPer, pId } = productData;
+
+  const getDiscountedPrice = () => {
+    return price - Math.floor((price * discountPer) / 100);
+  };
+  const handleClick = () => {
+    history.push(`${location.pathname}/${pId}`);
+  };
   return (
-    <Container>
+    <Container onClick={handleClick}>
       <ImageDiv>
-        <Image src="https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/11487342/2020/6/17/6c1f01ed-ed82-493c-92bd-3df9a35605741592396334139-Nautica-Men-Tshirts-721592396332125-5.jpg" />
+        <Image src={imageUrl} />
       </ImageDiv>
       <ContentDiv>
-        <ProductBrand>T</ProductBrand>
-        <ProductDescription>ST</ProductDescription>
+        <ProductBrand>{brand}</ProductBrand>
+        <ProductDescription>{description}</ProductDescription>
 
         <Price>
           <Wrap>
-            <DiscountedPrice>DP</DiscountedPrice>
-            <Strike>SP</Strike>
+            <DiscountedPrice>{getDiscountedPrice()}</DiscountedPrice>
+            <Strike>{price}</Strike>
           </Wrap>
-          <DiscountedPercentage>{`(10% OFF)`}</DiscountedPercentage>
+          <DiscountedPercentage>{`(${discountPer}% OFF)`}</DiscountedPercentage>
         </Price>
       </ContentDiv>
     </Container>
