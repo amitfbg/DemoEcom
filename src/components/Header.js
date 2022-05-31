@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
@@ -22,6 +23,21 @@ const ContainerRight = styled.div`
   align-items: center;
 `;
 
+const List = styled.ul`
+  list-style: none;
+  display: flex;
+  text-decoration: none;
+`;
+const ListItem = styled.li`
+  font-size: 1.25rem;
+  margin-right: 8px;
+  & > a {
+    color: #282c3f;
+    text-decoration: none;
+    font-weight: 500;
+  }
+`;
+
 function Header() {
   const history = useHistory();
   const handleClick = () => {
@@ -30,7 +46,19 @@ function Header() {
   return (
     <Container>
       <ContainerLeft onClick={handleClick}>EComDemo</ContainerLeft>
-      <ContainerRight></ContainerRight>
+      <ContainerRight>
+        <List>
+          <ListItem>
+            <Link to="/">Home</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/men/products">Men</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/women/products">Women</Link>
+          </ListItem>
+        </List>
+      </ContainerRight>
     </Container>
   );
 }

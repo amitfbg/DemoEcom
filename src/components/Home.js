@@ -1,12 +1,21 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import styled from "styled-components";
-import UserTypeCard from "./UserTypeCard";
+import GeneralComponent from "./GeneralComponent";
+const UserTypeCard = lazy(() => import("./UserTypeCard"));
+const BannerCard = lazy(() => import("./BannerCard"));
 
 const Container = styled.div`
   display: flex;
   margin: 0 4rem;
   flex-wrap: wrap;
   padding-top: 4rem;
+`;
+const BannerContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  justify-content: center;
 `;
 
 function Home() {
@@ -25,16 +34,54 @@ function Home() {
     },
   ];
 
+  const bannerData = [
+    {
+      bannerType: "child",
+      bannerId: "child",
+      bannerImage:
+        "https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/355b9499-3345-4457-8b3b-2eeceaecf4561645602467020-Infant-Essentials.jpg",
+    },
+    {
+      bannerType: "beauty",
+      bannerId: "beauty",
+      bannerImage:
+        "https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/fb091b07-c275-4578-b08d-b4f93dfe9e841645602466976-Beauty.jpg",
+    },
+    {
+      bannerType: "watches",
+      bannerId: "watches",
+      bannerImage:
+        "https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/054a056f-33e8-4b6c-b747-9b88d7fce0a11645602467174-Watches.jpg",
+    },
+    {
+      bannerType: "bath",
+      bannerId: "bath",
+      bannerImage:
+        "https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/09b3164c-241a-4134-baa1-49b12c56c3901645602466968-Bath-Essentials.jpg",
+    },
+  ];
+
   return (
-    <Container>
-      {users?.map((currUser) => (
-        <UserTypeCard
-          key={currUser?.userId}
-          userType={currUser?.userType}
-          userImage={currUser?.userImage}
-        />
-      ))}
-    </Container>
+    <Suspense fallback={<GeneralComponent val="Loading" />}>
+      <Container>
+        {users?.map((currUser) => (
+          <UserTypeCard
+            key={currUser?.userId}
+            userType={currUser?.userType}
+            userImage={currUser?.userImage}
+          />
+        ))}
+        <BannerContainer>
+          {bannerData?.map((currUser) => (
+            <BannerCard
+              key={currUser?.bannerId}
+              bannerType={currUser?.bannerType}
+              bannerImage={currUser?.bannerImage}
+            />
+          ))}
+        </BannerContainer>
+      </Container>
+    </Suspense>
   );
 }
 

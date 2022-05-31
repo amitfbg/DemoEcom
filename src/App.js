@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import styled from "styled-components";
 import "./App.scss";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Product from "./components/Product";
@@ -15,7 +16,7 @@ const ContainerBody = styled.div`
 function App() {
   return (
     <div className="app">
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Header />
         <ContainerBody>
           <Switch>
@@ -36,6 +37,7 @@ function App() {
             </Route>
             <Redirect to="/" />
           </Switch>
+          <Footer />
         </ContainerBody>
       </BrowserRouter>
     </div>
