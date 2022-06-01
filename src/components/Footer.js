@@ -6,7 +6,7 @@ const Container = styled.div`
   border-top: 1px solid #e7e7e7;
   text-align: center;
   padding: 20px;
-  width: 100%;
+  margin-top: auto;
 `;
 
 function Footer() {

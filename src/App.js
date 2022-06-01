@@ -11,6 +11,8 @@ import Products from "./components/Products";
 const ContainerBody = styled.div`
   height: calc(100% - 5rem);
   overflow: auto;
+  display: flex;
+  flex-direction: column;
 `;
 
 function App() {
@@ -23,16 +25,10 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/men/products">
+            <Route exact path="/:userCat/products">
               <Products />
             </Route>
-            <Route exact path="/women/products">
-              <Products />
-            </Route>
-            <Route exact path="/men/products/:productId">
-              <Product />
-            </Route>
-            <Route exact path="/women/products/:productId">
+            <Route exact path="/:userCat/products/:productId">
               <Product />
             </Route>
             <Redirect to="/" />

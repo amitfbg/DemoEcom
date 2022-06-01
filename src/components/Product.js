@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { menProducts, womenProducts } from "../__mockData__/mockData";
 import GeneralComponent from "./GeneralComponent";
+import { userTypeProduct } from "./Products";
+const SizeChart = lazy(() => import("./SizeChart"));
 
 const Container = styled.div`
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 `;
 const ContainerRight = styled.div`
   display: flex;
@@ -17,11 +18,10 @@ const ContainerRight = styled.div`
   padding-left: 1rem;
   margin-bottom: 10px;
 `;
-const ImageDiv = styled.div`
+const ImageDiv = styled.img`
   height: 30rem;
   width: 100%;
   background-image: ${({ src }) => `url(${src})`};
-  background-size: cover;
 `;
 const ContainerLeft = styled.div`
   width: 45%;
@@ -77,36 +77,6 @@ const DiscountedPercentage = styled.div`
   font-weight: 500;
   letter-spacing: 0.5px;
   color: #ff905a;
-`;
-
-const SizeContainer = styled.div`
-  margin: 10px 0 24px;
-`;
-const SizeHeader = styled.div`
-  margin: 0 0 10px;
-`;
-const SizeOptions = styled.div`
-  display: flex;
-  margin: 0 0 10px;
-`;
-
-const Size = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 20px;
-  border: 1px solid #bfc0c6;
-  color: #282c3f;
-  cursor: pointer;
-  margin-right: 4px;
-  &:hover {
-    border: 1px solid #ff3f6c;
-    color: #ff3f6c;
-  }
 `;
 
 const HorizontalLine = styled.div`
@@ -165,21 +135,18 @@ const WishButton = styled.div`
 `;
 
 function Product() {
-  let location = useLocation();
-  let { productId } = useParams();
+  let { userCat, productId } = useParams();
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const userType = location.pathname?.split("/")?.[1];
   useEffect(() => {
     setIsLoading(true);
-    let productToSearch = userType == "men" ? menProducts : womenProducts;
-
+    let productToSearch = userTypeProduct[userCat];
     const response = productToSearch?.filter((curr) => curr?.pId == productId);
     if (response?.length > 0) {
       setProduct(response[0]);
     }
     setIsLoading(false);
-  }, [userType, productId]);
+  }, [userCat, productId]);
 
   const getDiscountedPrice = () => {
     let tempPrice = Number(product?.price) || 0;
@@ -187,50 +154,37 @@ function Product() {
     return tempPrice - Math.floor((tempPrice * tempDisPer) / 100);
   };
 
-  const sizeChart = [
-    { id: "S", type: "S" },
-    { id: "M", type: "M" },
-    { id: "L", type: "L" },
-    { id: "XL", type: "XL" },
-    { id: "XXL", type: "XXL" },
-  ];
-
   const getContent = () => {
     if (isLoading) {
       return <GeneralComponent val="Loading" />;
     }
     if (Object.keys(product).length > 0) {
       return (
-        <Container>
-          <ContainerLeft>
-            <ImageDiv src={product?.imageUrl} />
-          </ContainerLeft>
-          <ContainerRight>
-            <ProductBrand>{product?.brand}</ProductBrand>
-            <ProductDescription>{product?.description}</ProductDescription>
-            <HorizontalLine />
-            <Price>
-              <Wrap>
-                <DiscountedPrice>{getDiscountedPrice()}</DiscountedPrice>
-                <Strike>{product?.price}</Strike>
-              </Wrap>
-              <DiscountedPercentage>{`(${product?.discountPer}% OFF)`}</DiscountedPercentage>
-            </Price>
-            <TaxInfo>inclusive of all taxes</TaxInfo>
-            <SizeContainer>
-              <SizeHeader>Select Size</SizeHeader>
-              <SizeOptions>
-                {sizeChart?.map(({ id, type }) => (
-                  <Size key={id}>{type}</Size>
-                ))}
-              </SizeOptions>
-            </SizeContainer>
-            <ButtonContainer>
-              <AddButton>ADD TO BAG</AddButton>
-              <WishButton>Wishlist</WishButton>
-            </ButtonContainer>
-          </ContainerRight>
-        </Container>
+        <Suspense fallback={<GeneralComponent val="Loading" />}>
+          <Container>
+            <ContainerLeft>
+              <ImageDiv src={product?.imageUrl} />
+            </ContainerLeft>
+            <ContainerRight>
+              <ProductBrand>{product?.brand}</ProductBrand>
+              <ProductDescription>{product?.description}</ProductDescription>
+              <HorizontalLine />
+              <Price>
+                <Wrap>
+                  <DiscountedPrice>{getDiscountedPrice()}</DiscountedPrice>
+                  <Strike>{product?.price}</Strike>
+                </Wrap>
+                <DiscountedPercentage>{`(${product?.discountPer}% OFF)`}</DiscountedPercentage>
+              </Price>
+              <TaxInfo>inclusive of all taxes</TaxInfo>
+              <SizeChart type={userCat} />
+              <ButtonContainer>
+                <AddButton>ADD TO BAG</AddButton>
+                <WishButton>Wishlist</WishButton>
+              </ButtonContainer>
+            </ContainerRight>
+          </Container>
+        </Suspense>
       );
     }
     return <GeneralComponent val="NoData" />;

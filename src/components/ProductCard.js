@@ -13,6 +13,7 @@ const Container = styled.div`
   margin: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 5px 5px 0 rgba(31, 38, 135, 0.37);
+  cursor: pointer;
 `;
 const ImageDiv = styled.div`
   height: 210px;

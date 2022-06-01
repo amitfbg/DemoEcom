@@ -1,33 +1,55 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import { menProducts, womenProducts } from "../__mockData__/mockData";
+import {
+  menProducts,
+  womenProducts,
+  kidsProducts,
+  watchProducts,
+  beautyProducts,
+  bathProducts,
+} from "../__mockData__/mockData";
+import GeneralComponent from "./GeneralComponent";
 import ProductCard from "./ProductCard";
 
 const Container = styled.div`
   display: flex;
   margin: 0 4rem;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 `;
 
-function Products() {
-  let location = useLocation();
-  const [products, setProducts] = useState([]);
-  const userType = location.pathname?.split("/")?.[1];
-  useEffect(() => {
-    if (userType == "men") setProducts(menProducts);
-    else setProducts(womenProducts);
-  }, [userType]);
+export const userTypeProduct = {
+  men: menProducts,
+  women: womenProducts,
+  child: kidsProducts,
+  watches: watchProducts,
+  beauty: beautyProducts,
+  bath: bathProducts,
+};
 
-  return (
-    <Container>
-      {products &&
-        products?.length > 0 &&
-        products.map((currProduct) => (
-          <ProductCard productData={currProduct} key={currProduct?.pId} />
-        ))}
-    </Container>
-  );
+function Products() {
+  let { userCat } = useParams();
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    if (userTypeProduct[userCat]) setProducts(userTypeProduct[userCat]);
+    else setProducts([]);
+  }, [userCat]);
+
+  const getContent = () => {
+    if (products && products?.length > 0)
+      return (
+        <Container>
+          {products.map((currProduct) => (
+            <ProductCard productData={currProduct} key={currProduct?.pId} />
+          ))}
+        </Container>
+      );
+    else return <GeneralComponent val="NoData" />;
+  };
+
+  return getContent();
 }
 
 export default Products;

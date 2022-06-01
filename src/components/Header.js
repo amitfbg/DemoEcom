@@ -49,13 +49,13 @@ function Header() {
       <ContainerRight>
         <List>
           <ListItem>
-            <Link to="/">Home</Link>
-          </ListItem>
-          <ListItem>
             <Link to="/men/products">Men</Link>
           </ListItem>
           <ListItem>
             <Link to="/women/products">Women</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/child/products">Kid</Link>
           </ListItem>
         </List>
       </ContainerRight>

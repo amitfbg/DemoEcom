@@ -1,10 +1,12 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
   height: 12rem;
   width: 12rem;
   margin: 1rem;
+  cursor: pointer;
 `;
 
 const Image = styled.img`
@@ -14,8 +16,12 @@ const Image = styled.img`
 `;
 
 function BannerCard({ bannerType, bannerImage }) {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push(`${bannerType}/products`);
+  };
   return (
-    <Container>
+    <Container onClick={handleClick}>
       <Image src={bannerImage} alt="NA" />
     </Container>
   );

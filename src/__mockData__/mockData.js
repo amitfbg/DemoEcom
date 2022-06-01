@@ -363,3 +363,362 @@ export const womenProducts = [
     discountPer: 55,
   },
 ];
+export const kidsProducts = [
+  {
+    pId: 1,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/7/19/1fa3e866-de58-4bf9-87db-8ba359108a331595107952522-1.jpg",
+    brand: "H&M",
+    description: "Infant Boys Blue Cotton Shirt & Shorts",
+    price: 1199,
+    discountPer: 40,
+  },
+  {
+    pId: 2,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/16894906/2022/1/21/baf8e481-d7f5-4afe-9860-a4a1d62ca4621642749546166ClothingSet1.jpg",
+    brand: "Nauti Nati",
+    description: "Girls Pink Checked Top with Shorts",
+    price: 1399,
+    discountPer: 50,
+  },
+  {
+    pId: 3,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/16334330/2021/12/2/5eb31306-337b-4db9-9089-ef45e0ed1f751638417222084ClothingSet1.jpg",
+    brand: "Hopscotch",
+    description: "Boys Blue & Red Shirt with Pyjamas & Blazer",
+    price: 1599,
+    discountPer: 40,
+  },
+  {
+    pId: 4,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17734590/2022/4/1/af1a0e21-5dbb-4a18-bd81-cfb25fee8b781648833099492NautiNatiGirlsBlueClothingSet1.jpg",
+    brand: "Nauti Nati",
+    description: "Girls Blue & White Printed Cotton Top with Shorts",
+    price: 1299,
+    discountPer: 35,
+  },
+  {
+    pId: 5,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17606352/2022/5/17/656a5264-2450-4810-889b-edbda692c3561652808851127CherryCrumbleGirlsBlueDenimShorts1.jpg",
+    brand: "Cherry Crumble",
+    description: "Girls Blue Denim Shorts",
+    price: 1899,
+    discountPer: 70,
+  },
+  {
+    pId: 6,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/16907036/2022/3/15/5af0007d-42eb-48fd-abfc-6fa843a60d591647327627938KazarMaxGirlsBeigeEmbellishedBallerinasFlats1.jpg",
+    brand: "KazarMax",
+    description: "Girls Beige Embellished Ballerinas Flats",
+    price: 1899,
+    discountPer: 55,
+  },
+  {
+    pId: 7,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/15973020/2021/10/29/2b6ee549-2b7a-42c2-b33a-827a3c1a558f1635513172506ATUNBlueDress1.jpg",
+    brand: "A.T.U.N.",
+    description: "A T U N Girls Blue & Yellow Polka Dot Shirt Dress",
+    price: 1399,
+    discountPer: 50,
+  },
+  {
+    pId: 8,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17475132/2022/4/7/375fe802-4b74-4f96-b36e-8d0f9731faf81649330944730-Moms-Love-Infant-Girls-Pink--White-Striped--Applique-Cotton--1.jpg",
+    brand: "Moms Love",
+    description:
+      "Infant Girls Pink & White Striped & Applique Cotton Dungarees with Top",
+    price: 699,
+    discountPer: 20,
+  },
+  {
+    pId: 9,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/18224196/2022/5/14/366c239c-0dc8-41e4-9cb5-4ea686c136de1652472941654Slip-onprintedtrainers1.jpg",
+    brand: "H&M",
+    description: "Girls Beige Slip-on Printed Trainers",
+    price: 999,
+    discountPer: 50,
+  },
+  {
+    pId: 10,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/8445083/2022/4/18/9530c347-5229-4a7d-a97e-4c18aa7feb781650284977694TiberTaberBoysWhitePrintedPanchakattu1.jpg",
+    brand: "Tiber Taber",
+    description: "Boys White Printed Panchakattu",
+    price: 1950,
+    discountPer: 10,
+  },
+  {
+    pId: 11,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17810198/2022/4/8/5eab24c6-b76f-46c1-8398-d1b7a59f2da316494028009842-piececottonset1.jpg",
+    brand: "H&M",
+    description: "Boys Grey 2-Piece Cotton Set",
+    price: 2199,
+    discountPer: 15,
+  },
+  {
+    pId: 12,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17475134/2022/4/11/f0b4383e-b97a-4766-9dd0-239f65ec84291649665114475LevisPrintSkaterDressClothingSetMomsLoveBoysClothingSetMomsL1.jpg",
+    brand: "Moms Love",
+    description:
+      "Infant Boys White & Black Striped Bow-Tie Applique Cotton Clothing Set",
+    price: 649,
+    discountPer: 20,
+  },
+];
+export const watchProducts = [
+  {
+    pId: 1,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17040148/2022/2/4/aaf6d239-ebc0-4204-b18b-c7ffe0ba9b3a1643958421795-Noise-ColorFit-Qube-Oxy-Smartwatch---Deep-Wine-7431643958421-1.jpg",
+    brand: "NOISE",
+    description: "Noise ColorFit Qube Oxy Smartwatch - Deep Wine",
+    price: 4999,
+    discountPer: 70,
+  },
+  {
+    pId: 2,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/15471534/2022/4/19/a6313188-f82f-412e-ad7b-09d82a1827871650344201285-Fastrack-Unisex-Black-Dial--Silicon-Straps-Analogue-Watch-38-5.jpg",
+    brand: "Fastrack",
+    description: "Unisex Black Dial & Silicon Straps Analogue Watch 38024PP25",
+    price: 950,
+    discountPer: 10,
+  },
+  {
+    pId: 3,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17423792/2022/4/8/ad884fbf-cfa1-4ca1-813d-3df042d041971649409853915-Ninja-Call-2-4151649409853077-3.jpg",
+    brand: "Fire-Boltt",
+    description: "Black Ninja Call 2 Bluetooth Calling Smart Watch 25BSWAAY#1",
+    price: 2999,
+    discountPer: 20,
+  },
+  {
+    pId: 4,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/10785718/2022/4/13/05c07014-9eb0-489b-b2ee-9bca9c9749271649845490910FossilMenGreyTheCarlyleHRGen5SmartwatchFTW40241.jpg",
+    brand: "Fossil",
+    description: "Men Grey The Carlyle HR Gen 5 Smartwatch FTW4024",
+    price: 12990,
+    discountPer: 10,
+  },
+  {
+    pId: 5,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17217206/2022/4/21/97ad1ebf-bf09-4085-955d-8d0c870e1ec11650543928280-GUESS-Men-Black-Patterned-Analogue-Watch-GW0334G2-4251650543-1.jpg",
+    brand: "GUESS",
+    description: "Men Black Patterned Analogue Watch GW0334G2",
+    price: 13500,
+    discountPer: 40,
+  },
+  {
+    pId: 6,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/13471916/2021/2/9/a9a87e2a-f8c8-4953-9e5f-b8c1b8f4ff201612846540076-boAT-Unisex-Black-Storm-Smart-Watch-621612846538704-1.jpg",
+    brand: "boAt",
+    description: "boAT Unisex Black Storm M Smart Watch",
+    price: 5999,
+    discountPer: 60,
+  },
+  {
+    pId: 7,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/18056332/2022/4/29/bd53e989-7ef6-4048-8c3b-e5c3f09514c81651224259284-pTron-Pulsefit-Pro-Bluetooth-Calling-Smartwatch-with-169-Ful-1.jpg",
+    brand: "pTron",
+    description:
+      "Pulsefit Pro Bluetooth Calling Smartwatch with 1.69' Full Touch Screen - Black",
+    price: 7999,
+    discountPer: 60,
+  },
+  {
+    pId: 8,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/13036798/2021/1/6/ded01db3-3130-4072-9330-81493c93add51609906140564-WROGN-Men-Black-Analogue-Watch-WRG00049A-7421609906139578-1.jpg",
+    brand: "WROGN",
+    description: "Men Black Analogue Watch WRG00049A",
+    price: 2999,
+    discountPer: 65,
+  },
+];
+export const beautyProducts = [
+  {
+    pId: 1,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/10244851/2021/2/10/32c4b366-a522-4d98-91f0-46d413de66031612945921510-Philips-Women-Heated-Straightening-Brush-with-Thermo-Protect-1.jpg",
+    brand: "Philips",
+    description:
+      "BHH880/10 Heated Straightening Brush with ThermoProtect Technology - Black",
+    price: 3699,
+    discountPer: 45,
+  },
+  {
+    pId: 2,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/17645368/2022/4/4/a2a33697-0921-4d22-b145-8169efd2d1541649074742289-LOreal-Professionnel-X-Tenso-Care-Sulfate-Free-Shampoo---250-1.jpg",
+    brand: "NEW LOreal Professionnel",
+    description: "X-Tenso Care Sulfate Free Shampoo - 250 ml",
+    price: 950,
+    discountPer: 10,
+  },
+  {
+    pId: 3,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/11805330/2021/9/23/8b2ab64d-713f-4078-be75-95c82679e0781632421533029-Parachute-Advansed-Aloe-Vera-Enriched-Coconut-Hair-Oil-250-m-2.jpg",
+    brand: "Parachute",
+    description:
+      "Set of 2 Advansed Aloe Vera Enriched Coconut Hair Oils - 250 ml & 75 ml",
+    price: 170,
+    discountPer: 20,
+  },
+  {
+    pId: 4,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/1954377/2020/4/24/92f4ef04-0989-438e-945b-158a3fda5bc71587730058250-Dove-Unisex-Hair-Therapy-Daily-Shine-Shampoo-340-ml-92515877-1.jpg",
+    brand: "Dove",
+    description: "Hair Therapy Daily Shine Shampoo for Dull Hair - 340ml",
+    price: 390,
+    discountPer: 20,
+  },
+  {
+    pId: 5,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/2974141/2018/6/19/a3fd93e4-4ead-4188-b66c-024b35cce47b1529401643190-Philips-Women-Black-Selfie-Straightener-HP830206-4391529401643170-1.jpg",
+    brand: "Philips",
+    description: "HP8302/06 Selfie SilkPro Care Hair Straightener - Black",
+    price: 1300,
+    discountPer: 21,
+  },
+  {
+    pId: 6,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/11629088/2022/5/10/baa14910-9242-4307-a780-907fa584e12d1652158470552-Lakme-Eyeconic-Kajal---Deep-Black-035-g-3361652158470035-1.jpg",
+    brand: "Lakme",
+    description: "Eyeconic Kajal - Deep Black 0.35 g",
+    price: 185,
+    discountPer: 10,
+  },
+  {
+    pId: 7,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/15455762/2021/12/2/c64b254a-1d35-4844-b1c5-13711fd267a61638440530580CarltonLondonWomenLimitedEditionBlushEaudeParfum-100ml1.jpg",
+    brand: "Carlton London",
+    description: "Women Limited Edition Blush Eau de Parfum- 100 ml",
+    price: 2199,
+    discountPer: 40,
+  },
+  {
+    pId: 8,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/9374997/2021/7/30/2613e26e-1c13-4054-8ad5-1841e8436a6b1627637166814-Philips-HP810046-SalonDry-ThermoProtect-1000W-Compact-Hair-D-1.jpg",
+    brand: "Philips",
+    description:
+      "HP8100/46 SalonDry ThermoProtect 1000W Compact Hair Dryer - Purple",
+    price: 875,
+    discountPer: 20,
+  },
+];
+export const bathProducts = [
+  {
+    pId: 1,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/154046/2022/4/10/e50eff20-0d8c-4796-bbd2-6f27469e0d771649589434383-Lakme-Women-Sun-Expert-Fairness--UV-Sunscreen-Lotion-60-ml-7-1.jpg",
+    brand: "Lakme",
+    description: "Women Sun Expert Fairness + UV Sunscreen Lotion 60 ml",
+    price: 225,
+    discountPer: 5,
+  },
+  {
+    pId: 2,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/1661379/2022/4/27/d3abedf1-8656-4369-9621-27513f3c22d81651056575884-Biotique-Bio-Sandalwood-Ultra-Soothing-UVAUVB-Sunscreen-Loti-1.jpg",
+    brand: "Biotique",
+    description:
+      "Bio Sandalwood Ultra Soothing UVA/UVB Sunscreen Lotion SPF 50+ 120 ml",
+    price: 350,
+    discountPer: 25,
+  },
+  {
+    pId: 3,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/10901940/2022/5/29/5729a2b3-41f9-42e3-8ac4-72d9057e98521653793313461MCaffeineSustainableExfoliatingCoffeeBodyScrubforTanRemovalS1.jpg",
+    brand: "MCaffeine",
+    description:
+      "Sustainable Exfoliating Coffee Body Scrub for Tan Removal & Soft-Smooth Skin 100 g",
+    price: 449,
+    discountPer: 11,
+  },
+  {
+    pId: 4,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/1954377/2020/4/24/92f4ef04-0989-438e-945b-158a3fda5bc71587730058250-Dove-Unisex-Hair-Therapy-Daily-Shine-Shampoo-340-ml-92515877-1.jpg",
+    brand: "Dove",
+    description: "Hair Therapy Daily Shine Shampoo for Dull Hair - 340ml",
+    price: 390,
+    discountPer: 20,
+  },
+  {
+    pId: 5,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/95942/2020/10/9/27953c8c-5796-4fe7-902e-45f69165c4d11602267125887LotusHerbalsSustainableWomenWhiteglowWhiteningBrighteningNou1.jpg",
+    brand: "Lotus Herbals",
+    description:
+      "Sustainable Whiteglow Whitening Brightening Nourishing Night Creme 60g",
+    price: 425,
+    discountPer: 25,
+  },
+  {
+    pId: 6,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/4384871/2021/8/11/44f62cd5-555e-45d2-ba86-05aad086ce001628671666203LakmeAbsolutePerfectRadianceSkinLighteningDayCreme15g1.jpg",
+    brand: "Lakme",
+    description: "Absolute Perfect Radiance Skin Lightening Day Creme 15g",
+    price: 99,
+    discountPer: 5,
+  },
+  {
+    pId: 7,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/9686483/2022/4/4/8a2eb88a-d628-45b4-9bf1-48ef6d6a28d61649075146860-Nivea-Unisex-Extra-Whitening-SPF-15-Cell-Repair-Body-Lotion--1.jpg",
+    brand: "Nivea",
+    description:
+      "Body Lotion SPF 15 Natural Glow Cell Repair 50x Vitamin C - 400 ml",
+    price: 499,
+    discountPer: 41,
+  },
+  {
+    pId: 8,
+    imageUrl:
+      "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/14172244/2022/4/29/713991ef-69ce-4584-b595-bfb20da712d01651215214804-Garnier-Bright-Complete-Vitamin-C-Booster-Face-Serum---15-ml-2.jpg",
+    brand: "Garnier",
+    description: "Bright Complete Vitamin C Booster Face Serum - 15 ml",
+    price: 250,
+    discountPer: 10,
+  },
+];
+export const sizeChart = {
+  adult: [
+    { id: "S", type: "S" },
+    { id: "M", type: "M" },
+    { id: "L", type: "L" },
+    { id: "XL", type: "XL" },
+    { id: "XXL", type: "XXL" },
+  ],
+  kid: [
+    { id: "9-12M", type: "9-12M" },
+    { id: "12-18M", type: "12-18M" },
+    { id: "18-24M", type: "18-24M" },
+    { id: "2-5Y", type: "2-5Y" },
+    { id: "5-8Y", type: "5-8Y" },
+  ],
+  free: [{ id: "OneSize", type: "OneSize" }],
+};
