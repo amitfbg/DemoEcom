@@ -6,9 +6,9 @@ const BannerCard = lazy(() => import("./BannerCard"));
 
 const Container = styled.div`
   display: flex;
-  margin: 0 4rem;
+  margin: 0 2rem;
   flex-wrap: wrap;
-  padding-top: 4rem;
+  padding-top: 2rem;
 `;
 const BannerContainer = styled.div`
   width: 100%;

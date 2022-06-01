@@ -3,10 +3,13 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 12rem;
-  width: 12rem;
+  height: 15rem;
+  width: 15rem;
   margin: 1rem;
   cursor: pointer;
+  @media screen and (min-width: 1152px) {
+    flex-grow: 1;
+  }
 `;
 
 const Image = styled.img`
