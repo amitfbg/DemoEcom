@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import styled from "styled-components";
+import BannerList from "./BannerList";
 import GeneralComponent from "./GeneralComponent";
 const UserTypeCard = lazy(() => import("./UserTypeCard"));
 const BannerCard = lazy(() => import("./BannerCard"));
@@ -80,6 +81,7 @@ function Home() {
             />
           ))}
         </BannerContainer>
+        <BannerList />
       </Container>
     </Suspense>
   );

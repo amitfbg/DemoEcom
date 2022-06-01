@@ -50,7 +50,7 @@ const BackButton = styled.div`
   margin-top: 0.5rem;
 `;
 
-const Loader = styled(HourglassEmptySharpIcon)`
+export const Loader = styled(HourglassEmptySharpIcon)`
   @keyframes pulse {
     0% {
       transform: rotate(0deg);
