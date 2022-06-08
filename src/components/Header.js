@@ -5,14 +5,17 @@ import styled from "styled-components";
 
 const Container = styled.div`
   height: 5rem;
+  width: 100%;
   display: flex;
+  position: fixed;
+  top: 0;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
   color: #000000;
   box-shadow: 0 4px 12px 0 rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 5%);
   margin-bottom: 4px;
-  position: relative;
+  background-color: #ffffff;
 `;
 const ContainerLeft = styled.div`
   font-size: 2.5rem;

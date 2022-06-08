@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import styled from "styled-components";
@@ -9,10 +10,9 @@ import Product from "./components/Product";
 import Products from "./components/Products";
 
 const ContainerBody = styled.div`
-  height: calc(100% - 5rem);
-  overflow: auto;
   display: flex;
   flex-direction: column;
+  margin-top: 5rem;
 `;
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
     <div className="app">
       <BrowserRouter basename="/">
         <Header />
-        <ContainerBody>
+        <ContainerBody id="c-body">
           <Switch>
             <Route exact path="/">
               <Home />

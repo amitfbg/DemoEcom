@@ -37,7 +37,7 @@ const BannerList = () => {
 
   const fetchData = async () => {
     const result = await fetch(
-      `https://dummyjson.com/products?limit=5&skip=${5 * (page - 1)}`
+      `https://dummyjson.com/products?limit=8&skip=${8 * (page - 1)}`
     );
     const data = await result.json();
     if (data?.products?.length) {
@@ -73,7 +73,7 @@ const BannerList = () => {
           ))}
         </Suspense>
       </Container>
-      <LoaderDiv ref={myRef} isWholeFetched={isWholeFetched}>
+      <LoaderDiv ref={myRef} isWholeFetched={isWholeFetched} id="loader">
         <Loader />
       </LoaderDiv>
     </>
