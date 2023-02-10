@@ -39,7 +39,7 @@ function SizeChart({ type }) {
   useEffect(() => {
     if (["men", "women"].includes(type)) {
       setSizeOptions(sizeChart["adult"]);
-    } else if (type == "child") {
+    } else if (type === "child") {
       setSizeOptions(sizeChart["kid"]);
     } else {
       setSizeOptions(sizeChart["free"]);
