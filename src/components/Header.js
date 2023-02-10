@@ -118,13 +118,13 @@ function Header() {
       <ContainerRight>
         <List isNavExpanded={isNavExpanded}>
           <ListItem>
-            <Link to="/men/products">Men</Link>
+            <Link id='men-nav' to="/men/products">Men</Link>
           </ListItem>
           <ListItem>
-            <Link to="/women/products">Women</Link>
+            <Link id='women-nav' to="/women/products">Women</Link>
           </ListItem>
           <ListItem>
-            <Link to="/child/products">Kid</Link>
+            <Link id='child-nav' to="/child/products">Kid</Link>
           </ListItem>
         </List>
       </ContainerRight>
