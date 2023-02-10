@@ -141,7 +141,7 @@ function Product() {
   useEffect(() => {
     setIsLoading(true);
     let productToSearch = userTypeProduct[userCat];
-    const response = productToSearch?.filter((curr) => curr?.pId == productId);
+    const response = productToSearch?.filter((curr) => curr?.pId === productId);
     if (response?.length > 0) {
       setProduct(response[0]);
     }
